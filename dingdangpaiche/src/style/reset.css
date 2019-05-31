@@ -1,0 +1,78 @@
+
+body{
+  background: #fff;
+  line-height: initial!important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.cb{
+  clear: both;
+}
+.oh{
+  overflow: hidden;
+}
+.por{
+  position: relative;
+}
+.poa{
+  position: absolute;
+}
+/* css 重置 */
+body, p, input, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, form { margin: 0; padding: 0; list-style: none; vertical-align: middle; font-weight:normal; }
+img { border:0; margin: 0; padding: 0;   }
+header, section, footer { display: block; margin: 0; padding: 0 }
+a{text-decoration:none;color:#000;}
+/*#bodyNone i{
+  font-size: 0.5rem;
+}
+#bodyNone{
+  width: 0.7rem;text-align: center;height: 0.7rem;position: absolute;top: 50%;left: 50%;margin-left: -0.35rem;margin-top: -0.55rem;
+}
+#bodyNone p{
+  font-size: 0.12rem;line-height: 0.3rem;
+}*/
+input{
+  box-shadow: none!important;
+}
+.mu-ripple-wrapper{
+  display: none;
+}
+
+
+.element::-webkit-scrollbar {display:none}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+/* ::-webkit-scrollbar
+{
+    width: 0rem;
+    height: 0rem;
+    background-color: #F5F5F5;
+} */
+
+/*定义滚动条轨道 内阴影+圆角*/
+/* ::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 0.01rem rgba(0,0,0,0);
+    border-radius: 0.1rem;
+    background-color: #F5F5F5;
+} */
+
+/*定义滑块 内阴影+圆角*/
+/* ::-webkit-scrollbar-thumb
+{
+    border-radius: 0.1rem;
+    -webkit-box-shadow: inset 0 0 0.06rem rgba(0,0,0,.3);
+    background-color: #555;
+} */
+.pswp__counter{
+  top: 20px!important;
+}

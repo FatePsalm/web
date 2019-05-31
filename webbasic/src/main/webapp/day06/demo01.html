@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//number对象
+	var n=3.1415926;
+	console.log(n.toFixed(3));
+	function s2(){
+		var span=document.getElementById("s1");
+		span.innerHTML=n.toFixed(3);	
+	}
+		/* 创建数组
+		已知数据时
+		js.中的数组都是object数组
+	 */
+	 var a1=["zhangsan",25,true];
+	 console.log(a1[1]);
+	 /*
+	 未知数据中
+	 */
+	 var a2=new Array();
+	 a2.push("lisi");
+	 a2.push(23);
+	 a2.push(false);
+	 console.log(a2[2]);
+	 /*
+	 归纳:无论哪种方式创建出来的数组
+	 本质上都是object数组,其用法都一样
+	 */
+	 /*
+	 	3.2数组倒转方法
+	 */
+	 var a3=[3,6,12,8,1,5];
+	 a3.reverse();
+	 console.log(a3);
+	 /*
+	 	数组排序
+	 */
+	 a3.sort();
+	 console.log(a3);
+	 /*
+	 传入函数可以改变其排序的结果
+	 */
+	 a3.sort(function(a,b){
+		 return a-b;
+	 });
+	 console.log(a3);
+	 /*
+	 Date对象
+	 */
+	 var d1=new Date();
+	 var d2=new Date("2017/06/05 09:00:00");
+	 console.log(d1);
+	 console.log(d2);
+	 /*
+	 	转为本地格式的字符串
+	 */
+	 console.log(d1.toLocaleDateString());
+	 console.log(d1.toLocaleTimeString());
+	 /*
+	 读写时间分量
+	 */
+	 var y=d1.getFullYear();
+	 //月份从0开始
+	 var m=d1.getMonth()+1;
+	 var d=d1.getDate();
+	 var today=y+"年"+m+"月"+d+"日";
+	 console.log(today) 
+	 /*
+	 6.regExp
+	 创建正则对象
+	 */
+	 var str="no zuo no die,no can no bb.";
+	 var reg=/no/;
+	 //2)test()
+	 //检测字符串中是否包含于正则匹配的子串
+	 console.log(reg.test(str));
+	 //exec
+	 //普通模式
+	 //检测字符串中第一个和正则匹配的子串
+	 console.log(reg.exec(str));
+	 //全局模式:
+	//第N次调用则检查字符串中第N个和正则匹配的子串
+	reg=/no/g;
+	console.log("全局模式");
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	console.log(reg.exec(str));
+	/*Function对象*/
+	//所声明的函数本身就是一个对象
+	function sum() {
+		var s=0;
+		if(arguments.length){
+			for(var i=0;i<arguments.length;i++){
+				s+=arguments[i];
+			}
+		}
+		return s;
+	}
+	 
+<!-- 页面加载时立刻调用此函数对象 -->
+console.log(sum(5,6));
+console.log(sum(2,5,6));
+console.log(sum(2,3,5,6));
+</script>
+
+</head>
+<body>
+
+	<p>在网页演示内置对象的使用方式</p>
+	<span id="s1" style="color:red "></span><input type="button" value="点击我" onclick="s2()"  />
+	
+	
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

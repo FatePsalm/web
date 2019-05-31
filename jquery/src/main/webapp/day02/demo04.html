@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<style type="text/css">
+		#gg{
+		border:1px solid red;
+		height:500px;
+		background-color:#2be;
+	}
+		#gg input{
+			float: right;
+			margin:10px;
+		}
+</style>
+<script type="text/javascript">
+	$(function () {
+		//给按钮绑定单击事件
+		$("#gg :button").click(function(){
+			//事件间隔600
+			$("#gg").slideUp(600);
+		});
+		//3秒之后自动点击此按钮
+		setTimeout(function(){
+			$("#gg :button").trigger("click");
+		}, 3000);
+	});
+</script>
+</head>
+<body>
+	<div id="gg">
+		<input type="button" value="※"/>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

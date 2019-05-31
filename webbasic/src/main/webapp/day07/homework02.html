@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+</style>
+
+<script type="text/javascript">
+	var id;
+	function time() {
+		var n=5;
+		var doc=document.getElementById("s");
+		if(id){
+			return;
+		}
+		id=setInterval(function () {
+		if(n+1){
+			doc.innerHTML="正在发送..."+"("+n+")";
+			n--;
+		}else{
+			doc.innerHTML="成功发送...";
+			clearInterval(id);
+			id=null;
+		}
+		}, 1000);
+	}
+	function start() {
+		var doc=document.getElementById("s");
+		var n=5;
+		setTimeout(function () {
+			doc.innerHTML="成功发送...";
+		}, 5000);
+	}
+	function end() {
+		if(!id){
+			return;
+		}
+		var doc=document.getElementById("s");
+		clearInterval(id);
+		doc.innerHTML="已撤销发送..."
+		id=null;
+	}
+</script>
+</head>
+<body>
+	<p><span id="s"></span></p>
+	<p><input type="button" value="发送" onclick="time();"/><input type="button" value="撤销" onclick="end();"/></p>
+</body>
+</html>

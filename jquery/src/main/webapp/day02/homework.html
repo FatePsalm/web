@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		height:500px;
+		width:100%;
+		border:1px solid red;
+		background-color:#2de;
+		float: left;
+		
+	}
+	p{
+		float: right;
+		position:fixed;
+		right: 20px;
+		top:20px;
+	}
+	p input{
+		width: 20px;
+		height:20px;
+	}
+	div{
+		clear: left;
+	}
+</style>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function up() {
+		console.log($("#d1").fadeOut(1000));
+		console.log(1);
+	}
+	$(function () {
+		setTimeout(function () {
+			$("#p1 :button").trigger("click");
+		}, 3000);
+	});
+</script>
+</head>
+<body>
+	<p id="p1"><input type="button" value="↑" onclick="up();"/></p>
+	<div id="d1">
+	</div>
+		<h1>今天是星期六啊</h1>
+		<h1>我不知道自己还要这里学习多久才可以出去找到一个好的工作</h1>
+		<h1>今天是星期六啊</h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

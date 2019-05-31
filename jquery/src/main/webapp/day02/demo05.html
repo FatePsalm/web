@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	#d1{
+		width:200px;
+		height:200px;
+		background-color:#abf;
+		/*
+			自定义动画基于定位(相对/绝对/固定)
+		*/
+		position: relative;
+	}
+	#d2{
+		width:200px;
+		height:100px;
+		background-color:#abf;
+		/*固定定位*/
+		position: fixed;
+		top:50px;
+		right:-180px;
+	}
+</style>
+<script src="..//js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function f1() {
+		//显示与隐藏的动画原理
+		//采用定时器连续不断的修改元素的样式(大小.透明度)
+		//当前方法f2相当于主线程,启动的定时器相当于
+		//支线程,二者并发执行,所以先输出over,3秒后动画才结束
+		$("#d1").show(3000);
+	}
+	function f2() {
+		//参数2是函数,在动画完成时被自动调用
+		//像这样的在某件事完成后被自动调用的函数
+		//称之为回调函数
+		$("#d1").hide(3000,function(){
+			console.log("over");
+		});
+	}
+	function f3() {
+		$("#d1").slideUp(3000);
+	}
+	function f4() {
+		$("#d1").slideDown(3000);
+	}
+	function f5() {
+		$("#d1").fadeIn(3000);
+	}
+	function f6() {
+		$("#d1").fadeOut(3000);
+		
+	}
+	
+	$(function () {
+		//给d1绑定悬停事件
+		$("#d1").hover(
+			function(){
+				//可以带三个参数 1:对象 2:事件
+				$(this).animate({"left":"20px"},600);
+				$(this).animate({"top":"200px"},60);
+			},
+			function () {
+				$(this).animate({"left":0},600);
+				$(this).animate({"top":0},60);
+			}
+		);
+		//给d2绑定悬停事件
+		$("#d2").hover(
+			function(){
+				//可以带三个参数 1:对象 2:事件
+				$(this).animate({"right":0},300);
+			},
+			function () {
+				$(this).animate({"right":"-180px"},60);
+			}
+		);
+	});
+</script>
+</head>
+<body>
+	<p>
+		<input type="button" value='显示' onclick="f1();"/>
+		<input type="button" value='隐藏' onclick="f2();"/>
+		<input type="button" value='收起' onclick="f3();"/>
+		<input type="button" value='放下' onclick="f4();"/>
+		<input type="button" value='淡入' onclick="f5();"/>
+		<input type="button" value='淡出' onclick="f6();"/>
+	</p>
+	<div id="d1" >
+		<img alt="" src="../images/01.jpg">
+	</div>
+	<div id="d2">
+		<img alt="" src="../images/01.jpg">
+		<img alt="" src="../images/02.jpg">
+		<img alt="" src="../images/03.jpg">
+		<img alt="" src="../images/04.jpg">
+		<img alt="" src="../images/05.jpg">
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

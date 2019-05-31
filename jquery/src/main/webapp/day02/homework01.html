@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		border:1px solid red;
+		width: 200px;
+		height: 1024px;;
+		background-color:#5cd;
+		position: fixed;
+		left: -199px;
+	}
+</style>
+<script src="..//js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function () {
+	//给d1绑定悬停事件
+	$("#d1").hover(
+		function(){
+			//可以带三个参数 1:对象 2:事件
+			$(this).animate({"left":0},600);
+		},
+		function () {
+			$(this).animate({"left":"-199px"},600);
+		}
+	);
+	
+});
+</script>
+</head>
+<body>
+	<div id="d1"></div>
+</body>
+</html>

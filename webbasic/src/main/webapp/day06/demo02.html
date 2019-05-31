@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	body{
+		font-size:15px;
+	}
+	p{
+		text-align: center;
+	}
+	input{
+		border:1px solid #ccc;
+		width: 200px;
+		height:15px;
+		}
+		.b1{
+		width: 200px;
+		height:60px;
+		}
+		.error{
+			color:red;
+			background:url(../img/delete.png) 5px
+			no-repeat;
+			margin:0 auto;
+		}
+		.ok{
+			color:blue;
+			background:url(../img/ok.png) 5px
+			no-repeat;
+			
+		}
+		
+</style>
+<script type="text/javascript">
+	function check_name(){
+		var name=document.getElementById("name").value;
+		var name_msg=document.getElementById("name_msg")
+		var reg = /^\w{5,10}$/;
+		if(reg.test(name)){
+			name_msg.className="ok";
+			return true;
+		}else{
+			name_msg.className="error";
+			return false;
+		}
+		console.log(name);
+		console.log(name_msg);
+	}
+	function check_password(){
+		var password=document.getElementById("password").value;
+		var password_msg=document.getElementById("password_msg")
+		var reg = /^\w{8,16}$/;
+		if(reg.test(password)){
+			password_msg.className="ok";
+			return true;
+		}else{
+			password_msg.className="error";
+			return false;
+		}
+		console.log(password);
+		console.log(password_msg);
+	}
+	
+</script>
+</head>
+<body>
+	<!-- 在js中任何数据都能当条件,但是此处是返回值
+	并不是条件,所以必须返回false时才能取消时间,返回其他空值无法替代false
+	 -->
+	<form action="http://doc.tedu.cn" onsubmit="return check_name()+check_password()==2">
+		<p>账号:<input type="text" id="name" onblur="check_name();"/><span id="name_msg"> &nbsp5-10位字母、数字、下划线</span></p>
+		<p>密码:<input type="password" id="password" onblur="check_password();"/><span id="password_msg"> &nbsp8-16位字母、数字、下划线</span></p>
+		<p><input type="submit" value="登陆" class="b1" /></p>
+	</form>
+</body>
+</html>

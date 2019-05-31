@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+   <style type="text/css">
+   	div{
+   		border:1px solid red;
+   		width:200px;
+   		padding: 30px;
+   		margin:20px auto;
+   	}
+   	p{
+   		border:1px solid red;
+   		padding:30px;
+   		text-align: center;
+   	}
+   </style>
+   <script type="text/javascript">
+   	function f1(e) {
+		alert('button');
+		//取消冒泡
+		//e={"stopPropagation":funtion(){}}
+		//e={"cancelBubble":false}
+		if(e.stopPropagation){
+			e.stopPropagation();
+		}else{
+			e.cancelBubble=true;
+		}
+	}
+   </script>
+</head>
+<body>
+	<p>事件触发的先后顺序遵循冒泡（由内向外触发）</p>
+	<div onclick="alert('div');">
+		<p onclick="alert('p');">
+			<input type="button" value="按钮1" onclick="f1(event);"/>
+		</p>
+	</div>
+</body>
+</html>

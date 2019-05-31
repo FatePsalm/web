@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	var font0;
+	window.onload=function(){
+		font0=$("p").css("font-size");
+		
+		var id=setInterval(function(){
+			if(id%2==0){
+				var size=$("p").css("font-size");
+				size=size.replace("px","");
+				$("p").css("color","red");
+				$("p").css("font-size",++size+"px");
+				id++;
+			}else{
+				$("p").css("color","green");
+				$("p").css("font-size",font0);
+				id++;
+			}
+		}, 1000);
+		
+	}
+	function bigger() {
+		//$("p:fist")第一个 $("p:eq(1)")第二个
+		//获取段落原来的字号(16px)
+		console.log(1);
+		var size=$("p").css("font-size");
+		//去掉单位以便计算
+		size=size.replace("px","");
+		//+1后再将字号设置给所有的段落
+		$("p").css("font-size",++size+"px");
+		
+	}
+	function f1() {
+		$("p").css("font-size",font0);
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="+" onclick="bigger();"/>
+	<input type="button" value="复位" onclick="f1();"/>
+	<p>jQuery是一个轻量级的js框架</p>
+	<p>它提供了简介而一致的API</p>
+	<p>它能够极大程度的提高js的变成效率</p>
+</body>
+</html>

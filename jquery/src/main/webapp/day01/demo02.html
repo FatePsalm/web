@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function prt() {
+		var ps=$("p");
+		console.log(ps);
+		for(var i=0;i<ps.length;i++){
+			console.log(ps[i].innerHTML);
+		}
+	}
+	function chg(img) {
+		if($(img).width()==218){
+			$(img).width(250).height(250);
+		}else{
+			$(img).width(218).height(218);
+		}
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="打印" onclick="prt();"/>
+	<p>jQuery对象本质上就是DOM数组</p>
+	<p>jQuery对象才能调用jQuery的API</p>
+	<p>DOM对象才能调用DOM的API</p>
+	<div>
+		<img alt="" src="../images/01.jpg" onmouseover="chg(this);" />
+		<img alt="" src="../images/02.jpg" onmouseover="chg(this);"/>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{
+		border:1px solid red;
+		width:400px;
+		position:relative;
+		/*要以此元素为目标设置绝对定位
+		但不希望它偏移更不希望它释放位置
+		所以只是写了relative而已*/
+		height:300px;
+	}
+	p{
+		position:absolute;
+		bottom:50px;
+		width: 400px;
+		text-align: center;
+		background-color:#fff;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<img alt="" src="../images/pig.png">
+		<p>苍苍老师到此一游</p>
+	</div>
+</body>
+</html>

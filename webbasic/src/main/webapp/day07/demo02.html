@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	.t{
+		font-size:30px;
+		width: 180px;
+		height: 50px;
+		text-align: center;
+		margin-left: 20px;
+	}
+	input{
+		width: 120px;
+		height:30px;
+	}
+</style>
+<script type="text/javascript">
+	var id;
+	function f1() {
+		if(id){
+			//若id非空,则说明定时器已启动
+			//此时就不要重复的启动定时器了
+			return;
+		}
+			var doc=document.getElementById("s1");
+		id=setInterval(function(){
+			var	t=new Date();
+			var y=t.getFullYear();
+			var m=t.getMonth()+1;
+			var d=t.getDate();
+			var h=t.getHours();
+			var mi=t.getMinutes();
+			var si=t.getSeconds();
+			var time=y+"年"+m+"月"+d+"日"+h+"时"+mi+"分"+si+"秒";
+			console.log(t.toLocaleTimeString());
+			console.log(id);
+			doc.innerHTML=time;
+		}, 1000);
+	}
+	function f2() {
+		clearInterval(id);
+		//清空ID以便于下一次开始
+		id=null;
+	}
+</script>
+</head>
+<body>
+	<p class="t"><span id="s1"></span></p>
+	<p><input type="button" value="开始" id="b1" onclick="f1();"/>
+	<input type="button" value="暂停" id="b2" onclick="f2();"/></p>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.su{
+		width: 430px;
+		height:60px;
+		font-size:30px;
+	}
+	p{
+		text-align: center;
+	}
+	.error{
+		color:#f00;
+	}
+	.ok{
+		color:#00f;
+	}
+	div{
+		border:1px solid red;
+	}
+	
+</style>
+<script type="text/javascript">
+	function check_name() {
+		var user=document.getElementById("user").value;
+		var user_msg=document.getElementById("user_msg");
+		console.log(user);
+		console.log(user_msg);
+		var reg=/^\w{5,10}$/
+		if(reg.test(user)){
+			user_msg.className="ok";
+			user_msg.innerHTML="√5-10位字母、数字、下划线";
+			return true;
+		}else{
+			user_msg.className="error";
+			user_msg.innerHTML="×5-10位字母、数字、下划线";
+			return false;
+		}
+		
+		
+	}
+	function check_password() {
+		var password=document.getElementById("password").value;
+		var password_msg=document.getElementById("password_msg");
+		var reg=/^\w{8,16}$/
+			if(reg.test(password)){
+				password_msg.className="ok";
+				password_msg.innerHTML="√8-16位字母、数字、下划线";
+				return true;
+			}else{
+				password_msg.className="error";
+				password_msg.innerHTML="×8-16位字母、数字、下划线";
+				return false;
+			}
+		console.log(password);
+		console.log(password_msg);
+	}
+	function su() {
+		var str=document.getElementById("t1");
+		var input=str.value;
+		console.log(input);
+		try{
+			str.value=eval(input);
+		}catch (e) {
+			str.value="Error";
+			alert("Error,不合法!")
+		}
+	}
+</script>
+</head>
+<div>
+<body >
+	<form action="http://www.tmooc.cn" onsubmit="return check_name()+check_password()==2">
+	<p>账号:<input type="text" id="user" onblur="check_name();"/>
+	<span id="user_msg" >&nbsp5-10位字母、数字、下划线</span></p>
+	<p>密码:<input type="password" id="password" onblur="check_password();"/>
+	<span id="password_msg" >&nbsp8-16位字母、数字、下划线</span></p>
+	<p><input type="submit" value="登录" class="su"/></p>
+	</form>
+	</div>
+	<div>
+	<p>
+		<input type="text" id="t1"/>
+		<input type="button" value="等于" onclick="su();"/>
+	</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

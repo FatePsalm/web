@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function cal() {
+	var input=document.getElementById("ss");
+	//获取框内的算式
+	var ss=input.value;
+	//运行此算式
+	try{
+	input.value=eval(ss);
+	}catch (e) {
+		input.value="Error";
+	}
+}
+</script>
+</head>
+<body>
+	<input type="text" id="ss"/>
+	<input type="button" value="=" 
+		onclick="cal();"/>
+</body>
+</html>

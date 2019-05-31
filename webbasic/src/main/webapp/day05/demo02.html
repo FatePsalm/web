@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//在这里写js有两种情况
+	//1 将js封装成函数,该函数是在页面加载
+	//完成后,用户点击时调用的
+	
+	/*
+		2.直接书写js的逻辑,该逻辑在页面加载时
+		立刻调用,其时机甚至比body还早!
+	*/
+	for(var i=0;i<2;i++){
+	alert('你好,欢迎来到...')
+	}
+	console.log('控制台打印');
+	var x;
+	console.log(x);
+	x="百度无所不能!"
+		console.log(x);
+	/*
+		数据类型
+	*/
+		var s="hello";
+		var n=3.14;
+		var b=true;
+		console.log(s);
+		console.log(n);
+		console.log(b);
+		//3.数据类型的隐式转换
+		console.log(s+n);
+		console.log(s+b);
+		console.log(n+b);
+		console.log(b+b);
+		
+		/*
+			数据类型相关函数
+			
+		*/
+		console.log(parseInt(3.14));
+		console.log(parseInt("3.14"));
+		console.log(parseInt("abc"));
+		console.log("下午内容");
+		console.log(typeof(6));
+		console.log(isNaN(56));
+		console.log(isNaN("56"));
+		console.log(isNaN("abc"));
+		console.log(isNaN(""));
+		console.log(parseInt(""));
+		console.log("运算符演示");
+		//运算符演示
+		var c=6;
+		var d="6";
+		console.log(c==d);
+		console.log(c===d);
+		
+		/*
+			js中允许使用任何值做条件
+			当该值是非布尔值时,若它是空值
+			则相当于false,若它是非控值
+			则相当于true.这样的规则是为了
+			简化条件表达式
+		*/
+		var k="hi";
+		if(k){
+			console.log("ok");
+		}
+		var h=0;
+		h && console.log("猥琐");
+		
+</script>
+</head>
+<body>
+	<p>在此网页上演示基础的语法</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

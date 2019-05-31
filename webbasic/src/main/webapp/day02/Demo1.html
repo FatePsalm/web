@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 表单:用来输入数据发送数据的元素 -->
+	<!-- 表单元素:用来申明表单的范围
+	只有在此范围内的控件中的数据才能发送
+	给服务器 
+	action:声明表单提交给目标
+	method,enctype-->
+	<!-- 表单控件:用来输入数据
+	2.1 input元素(9个)
+	文本框
+	密码框
+	2.2 其他元素(3个)
+	 -->
+	<form action="http://www.tmooc.cn">
+		<!-- 文本框 
+		type文本框
+		value账号
+		maxlength最大值
+		readonly只读
+		-->
+		<p>账号:<input type="text" value="账号" maxlength="10" readonly/></p>
+		<!-- 密码框 :属性同上-->
+		<p>密码:<input type="password"/></p>
+		<!-- 单选框 
+		name组名:同一组radio彼此互斥
+		checked:默认选中-->
+		<p>性别:
+		<input type="radio" name="sex"/>男
+		<input type="radio" name="sex"/>女
+		<input type="radio" name="sex" checked/>人妖
+		</p>
+		<!-- 多选框 -->
+		<p>
+			<!-- 兴趣爱好 -->
+			兴趣:
+			<input type="checkbox" checked/>读书
+			<input type="checkbox"/>看电影
+			<input type="checkbox"/>旅游
+			<input type="checkbox"/>睡觉
+		</p>
+		<!-- 隐藏框 -->
+		<p>
+		<input type="hidden" value="love"/>
+		</p>
+		<p>
+			<!-- 文件框 -->
+			文件框<input type="file"/>
+		</p>
+		<p>
+			<!-- 提交.重置.普通按钮 -->
+			提交
+			<input type="submit" value="注册"/>
+		</p>
+		<p>
+			
+			重置<input type="reset" value="重置"/>
+		</p>
+		<p>
+			
+			普通按钮<input type="button" value="测试"/>
+		</p>
+		<!-- label用来管理表单中的文本
+		可以将文本与控件绑定到一起,从而增加
+		了控件的可点击范围,从而提高了易用性 -->
+		<p>
+			<input type="checkbox" id="c1"/>
+			<label for="c1">我已阅读并自愿遵守此协议.</label>
+		</p>
+		<p>
+		<!-- 下拉选 
+		selected默认选项
+		value-->
+				城市:
+			<select>
+				<option>请选择</option>
+				<option selected>北京</option>
+				<option>天津</option>
+				<option>上海</option>
+				<option>成都</option> 
+			</select>
+		</p>
+		<p>
+			<!-- 文本域 
+			cols:宽度
+			rows:高度
+			双标签中间的内容就是默认值
+			-->
+			简介:
+			<textarea rows="5" cols="10">自我介绍</textarea>
+		</p>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</form>
+</body>
+</html>

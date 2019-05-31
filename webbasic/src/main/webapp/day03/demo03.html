@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.d0,p{
+		width:400px;
+		border:1px solid red;
+	}
+	.d1,.d2,.d3{
+		width:100px;
+		height:100px;
+		margin:10px;
+	}
+	.d1{
+		background-color:red;
+	}
+	.d2{
+		background-color:green;
+	}
+	.d3{
+		background-color:blue;
+	}
+	/*
+	浮动
+	*/
+	.d1,.d2,.d3{
+		float:left;
+	}
+	/*
+	消除浮动影响
+	
+	p{
+		clear:left;
+	}
+	.d0{
+		border:0;
+	}
+	*/
+	
+	.d4{
+	/*
+		对哪个元素clear,该元素将不受浮动影响,出现在浮动目标之下
+	*/
+		clear:left;
+	}
+	
+</style>
+</head>
+<body>
+	<div class="d0">
+		<div class="d1"></div>
+		<div class="d2"></div>
+		<div class="d3"></div>
+		<div class="d4"></div>
+	</div>
+	<p>浮动时观察我的位置</p>
+</body>
+</html>

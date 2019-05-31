@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function f1() {
+		if(confirm("是否离开网页!")){
+		location.href="http://www.tmooc.cn";
+		}
+	}
+	function f2() {
+		location.reload();
+	}
+	function f3() {
+		history.forward();
+	}
+	var n=0;
+	var m=0;
+	function f4() {
+		var arr=new Array();
+		var sum=new Array();
+		arr.push("screen.width");
+		sum.push(screen.width);
+		arr.push("screen.height");
+		sum.push(screen.height);
+		arr.push("screen.availWidth");
+		sum.push(screen.availWidth);
+		arr.push("screen.availHeight");
+		sum.push(screen.availHeight);
+		arr.push("navigator.userAgent");
+		sum.push(navigator.userAgent);
+		console.log(arr);
+		var scan=document.getElementById("d1");
+		var scan1=document.getElementById("d2");
+		console.log(arr.length);
+		if(n==(arr.length)){
+			scan.innerHTML="已到数组末尾!";
+			scan1.innerHTML="已到数组末尾!";
+			n=0;
+			m=0;
+		}else{
+		scan.innerHTML=arr[n++];
+		scan1.innerHTML=sum[m++];
+		}
+			
+
+		
+		
+		
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="前往" onclick="f1();"/>
+	<input type="button" value="刷新" onclick="f2();"/>
+	<input type="button" value="后退" onclick="f3();"/>
+	<p><span id="d1"></span></p>
+	<p><span id="d2"></span></p>
+	<p><input type="button" value="浏览属性" onclick="f4();"/></p>
+	
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function f1(img) {
+		if($(img).width()==218){
+			$(img).width(250).height(250);
+		}else{
+			$(img).width(218).height(218);
+		}
+	}
+</script>
+<style type="text/css">
+	img{
+		margin:140px ;
+		padding: 140px;
+		float: left;
+		border:1px solid red;
+	}
+</style>
+</head>
+<body>
+	<div><img alt="" src="../images/01.jpg" onclick="f1(this);"></div>
+	<div><img alt="" src="../images/02.jpg" onclick="f1(this);"></div>
+</body>
+</html>

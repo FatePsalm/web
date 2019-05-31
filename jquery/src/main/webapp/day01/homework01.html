@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+var size;
+	$(function () {
+		size=$("p").css("font-size");
+	});
+	function f1() {
+		var p=$("p").css("font-size");
+		var psize=p.replace("px","");
+		$("p").css("font-size",++psize+"px");
+	}
+	function f2() {
+		$("p").css("font-size",size);
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="放大" onclick="f1();"/>
+	<input type="button" value="还原" onclick="f2();"/>
+	<p>jQuery是一个轻量级的js框架</p>
+	<p>它提供了简介而一致的API</p>
+	<p>它能够极大程度的提高js的变成效率</p>
+</body>
+</html>

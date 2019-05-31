@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.big{
+		font-size:30px;
+	}
+	.important{
+		color:red;
+	}
+</style>
+<script src="../js/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+	function f1() {
+		var li=$("<li>石家庄</li>");
+		$("ul").append(li);
+	}
+	function f2() {
+		var li=$("<li>济南</li>");
+		$("#gz").before(li);
+	}
+	function f3() {
+		$("#gz+").remove();
+	}
+	//根据层次查询节点
+	$(function(){
+		
+		//假设调用别人的方法,返回了这个节点
+		var li=$("#gz");
+		//父亲
+		console.log(li.parent());
+		//兄弟
+		console.log(li.next());
+		console.log(li.siblings());
+		//后代
+		console.log($("ul").find("li:contains('州')"));
+		//样式操作
+			$("p").addClass("big").addClass("important");
+		setTimeout(function(){
+			$("p").removeClass("big").removeClass("important");
+			//查看是否包含某样式
+			console.log($("p").hasClass("big"));
+		}, 1000);
+		
+		setInterval(function () {
+			$("p").toggleClass("big").toggleClass("important");
+			
+		}, 1000);
+	});
+</script>
+</head>
+<body>
+	增加删除节点
+	<input type="button" value="追加" onclick="f1();"/>
+	<input type="button" value="插入" onclick="f2();"/>
+	<input type="button" value="删除" onclick="f3();"/>
+	<ul>
+		<li>北京</li>
+		<li>上海</li>
+		<li id="gz">广州</li>
+		<li>深圳</li>
+		<li>杭州</li>
+	</ul>
+	<p>jQuery支持对样式的操作</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 标题会独立成行-->
+	<h1>H1标题</h1>
+	<h2>H2标题</h2>
+	<h3>H3标题</h3>
+	<h4>H4标题</h4>
+	<h5>H5标题</h5>
+	<h6>H6标题</h6>
+	<p>范传奇暗恋王克晶</p>
+	<!-- 将此链接到锚点之上 -->
+	<p><a href="#cang">苍老师</a>有点吃醋</p>
+	<!-- 列表 -->
+	
+	<!-- 有序列表 -->
+	<ol>
+		<li>四川省</li>
+		<li>成都市</li>
+		<li>高新区</li>
+		<li>孵化园</li>
+		<li>益州大道</li>
+		<li>德商国际</li>
+	</ol>
+	<!-- 无序列表 -->
+	<ul>
+		<li>石家庄</li>
+		<li>廊坊</li>
+		<li>北京</li>
+		<li>佳木斯</li>
+		<li>河北</li>
+		<li>四川</li>
+		<li>天津</li>
+	</ul>
+	<!-- 嵌套列表 -->
+	<ol>
+		<li>
+		河北省
+			<ul>
+				<li>保定</li>
+				<li>石家庄</li>
+				<li>尼桑</li>
+				<li>奔驰</li>
+				<li>索菲亚</li>
+				
+			</ul>
+		</li>
+		<li>
+		四川省
+			<ul>
+				<li>自贡市</li>
+				<li>成都市</li>
+				<li>攀枝花</li>
+				<li>广安市</li>
+			</ul>
+		</li>
+		<li>河北省</li>
+		<li>河北省</li>
+		<li>河北省</li>
+	</ol>
+	<!-- 5.行内元素 -->
+	<!--1)基本用法 -->
+	<p>
+		北京市<b>海淀区</b>北<i>三环</i>西路甲18号<span style="color:red;"><u>中鼎大厦</u></span>B座8层
+	</p>
+	<!-- 2)空格折叠原则 -->
+	<p>
+		那是一个<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>秋天,<br>
+		看着传奇<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>跑偏.<br>
+		奔着克晶<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>而去,<br>
+		误入老苍<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>心间.
+		
+	</p>
+	<!-- 6.图片 -->
+	<!-- 1)从盘符开始写出图片的完整路径.这样的方式将路径写死了,
+	一旦软件上线是,路径有变化,代码改动巨大 -->
+	<!-- 2)相对路径写
+	只需要写出图片和网页的相对关系.
+	 -->
+	 <p>
+	 	<!-- 图片和网页平级 -->
+	 	<img alt="" src="01.jpg">
+	 	<!-- 图片和网页下级 -->
+	 	<img alt="" src="i/02.jpg">
+	 	<!-- 图片和网页上级 -->
+	 	<img alt="" src="../03.jpg">
+	 	<!-- 一般这样用 -->
+	 	<img alt="" src="../images/04.jpg">
+	 </p>	
+	 <p>
+	 	<!-- 超链接 -->
+	 	<!--1) 常规用法 -->
+	 	<a href="http://www.tmooc.cn/web/index_new.html?tedu">希望</a>
+	 	<!--target="_blank;"在新的文档中打开超链接  -->
+	 	<a href="http://doc.tedu.cn/" target="_blank;">文档</a>
+	 </p>
+	 <!-- 2)锚点 -->
+	 <!-- 7.2.1)将此位置做成锚点 -->
+	<p>
+		<a name="cang">人</a>去楼已空,独留我苍松.苍老师的苍,苍老师的松.
+	</p>
+	<p>
+	<!-- 网页顶部默认为锚点(没名) -->
+		<a href="#">回到顶部</a>
+	</p>
+	<!--8. 表格 -->
+	<!-- 基本用法 -->
+	<table border="1" cellspacing="0" width="50%" >
+		<tr>
+			<td>苍老师</td>
+			<td>范传奇</td>
+		</tr>
+		<tr>
+			<td>王克晶</td>
+			<td>程祖红</td>
+		</tr>
+	</table>
+	<!-- 跨行与跨列 -->
+	<table border="1" cellspacing="0" width="50%" >
+		<tr>
+			<!-- 跨列 -->
+			<td colspan="2">苍老师</td>
+			<!-- <td>范传奇</td> -->
+		</tr>
+		<tr>
+			<td>王克晶</td>
+			<td>程祖红</td>
+		</tr>
+	</table>
+	<table border="1" cellspacing="0" width="50%"  >
+		<tr>
+			<td rowspan="2">苍老师</td>
+			<td>范传奇</td>
+		</tr>
+		<tr>
+			<!-- <td>王克晶</td> -->
+			<td>程祖红</td>
+		</tr>
+	</table>
+	<!-- 行分组 -->
+	<table border="1" cellspacing="0" width="30%">
+			<thead>
+				<tr>
+					<td>编号</td>
+					<td>名称</td>
+					<td>金额</td>
+				</tr>
+				
+			</thead>
+			<tbody style="color:blue;">
+				<tr>
+					<td>1</td>
+					<td>肥皂</td>
+					<td>3块</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">合计</td>
+					<td>43</td>
+				</tr>
+			</tfoot>
+	</table>
+	
+	 
+</body>
+</html>

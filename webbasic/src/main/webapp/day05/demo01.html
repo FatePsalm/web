@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 嵌入式
+	在script标签内书写js
+	该标签可以卸载网页的任意位置
+ -->
+<script type="text/javascript">
+	/*js注释和java一样*/
+	//js注释和java
+	//1 js中的函数都是共有的
+	//2 js中的函数可以有返回值,但是不需要声明类型
+	function f2(){
+		//js当中不区分单引号和双引号
+		alert('范传奇');
+	}
+</script>
+<!-- 文件调用式:在单独的js文件中书写js ,该标签要么用来引用js 要么用来书写js-->
+<script type="text/javascript" src="my.js"></script>
+</head>
+<body>
+	<!-- 事件:就是用户的操作/动作,就是js触发的时机
+	如:单击,双击事件
+	1:事件定义式
+	在定义事件时直接书写JS
+	 -->
+	<input type="button" value="ON" onclick="alert('苍老师')"/>
+	<input type="button" value="OFF" onclick="f2();"/>
+	<input type="button" value="UP" onclick="f3();"/>
+</body>
+</html>
