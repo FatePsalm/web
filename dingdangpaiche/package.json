@@ -16,7 +16,7 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "calculatorjs": "^0.1.7",
-    "jquery": "^2.2.3",
+    "jquery": "^3.5.0",
     "lib-flexible": "^0.3.2",
     "mint-ui": "^2.2.12",
     "muse-ui": "^2.1.0",
